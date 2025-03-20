@@ -39,18 +39,30 @@ body {
     box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* EVENT */
+
 .event {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
     position: relative;
     background-color: rgba(255, 245, 230, 0.9);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    width: 40%;
-    margin: 20px 0;
+    width: 38%;
+    margin: 20px 0; 
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
+
+.event.left {
+    left: 5%; 
+}
+
+.event.right {
+    left: 54%; 
+
 
 .event:hover {
     background-color: rgba(255, 239, 210, 1);
@@ -59,24 +71,25 @@ body {
 }
 
 
-.event.left {
-    left: 0;
-}
 
-.event.right {
-    left: 55%;
-}
-
-.event img {
-    max-width: 100%;
-    border-radius: 8px;
-    height: 150px;
-    object-fit: cover;
-}
 
 .event h3 {
-    margin-top: 0;
+    margin: 0;
+    font-size: 1.1em;
 }
+.event img {
+    width: 100%; 
+    max-width: 180px; 
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: contain; 
+    margin-bottom: 10px; 
+}
+
+
+
+
 
 /* MODAL */
 .modal {
@@ -336,52 +349,62 @@ body {
     <h1>INTERACTIVE TIMELINE</h1>
     <div class="timeline">
          <div class="event left" onclick="openModal('Jose Rizal', 'Si Jose Rizal ay isinilang noong Hunyo 19, 1861, sa Calamba, Laguna. Lumaki siya bilang isang matalinong bata at nagkaroon ng interes sa pagsusulat at sining. Isa siyang pambansang bayani ng Pilipinas na hindi lang isang rebolusyonaryo kundi isang mapagmahal na tao na nakaranas din ng maraming relasyon sa kanyang buhay.', 'Jose_Rizal.mp4')">
-        <h3>Jose Rizal (1861)</h3>
+        
         <img src="Jose_Rizal.jpg" alt="Jose Rizal">
+        <h3>Jose Rizal (1861)</h3>  
     </div>
       <div class="event right" onclick="openModal('Segunda Katigbak', 'Siya ang unang pag-ibig ni Rizal, isang napakagandang dalaga mula sa Lipa, Batangas. Nakilala niya ito sa isang pagbisita sa La Concordia College, kung saan ito nag-aaral. Bagamat may damdamin sila sa isa’t isa, hindi nagkaroon ng katuparan ang kanilang pagmamahalan dahil si Segunda ay nakatakda nang ipakasal sa iba.', 'Segunda_Katigbak.mp4')">
-    <h3>Segunda Katigbak (1877)</h3>
+    
     <img src="Segunda_Katigbak.jpg" alt="Segunda Katigbak">
+    <h3>Segunda Katigbak (1877)</h3>
 </div>
 
         <div class="event left" onclick="openModal('Leonor Valenzuela', 'Isang matangkad at mestisang dalaga mula sa Pagsanjan, Laguna, na nakilala ni Rizal habang nag-aaral sa Unibersidad ng Santo Tomas. Isa siya sa mga unang niligawan ni Rizal, at naging malapit sila sa isa’t isa. Upang maipahayag ang kanyang damdamin, gumamit si Rizal ng lihim na tinta mula sa tubig-alat upang sumulat ng mga liham ng pag-ibig sa dalaga, na makikita lamang kapag pinainitan ng kandila.', 'Leonor_Valenzuela.mp4')">
-            <h3>Leonor Valenzuela (1878)</h3>
+            
             <img src="Leonor_Valenzuela.jpg" alt="Leonor Valenzuela">
+            <h3>Leonor Valenzuela (1878)</h3>
         </div>
 
         <div class="event right" onclick="openModal('Leonor Rivera', 'Siya ang itinuturing na “tunay na pag-ibig” ni Rizal. Si Leonor ay isang mahinhin at matalinong dalaga na kanyang pinsan at matagal niyang naging kasintahan. Halos isang dekada silang nagpalitan ng liham, ngunit dahil sa pagtutol ng ina ni Leonor sa kanilang relasyon, hindi sila nagkatuluyan. Sa huli, napilitan si Leonor na pakasalan ang isang Ingles na inhinyero, bagay na lubos na nagpahapdi sa damdamin ni Rizal.', 'Leonor_Rivera.mp4')">
-            <h3>Leonor Rivera (1880-1891)</h3>
+           
             <img src="Leonor_Rivera.jpg" alt="Leonor Rivera">
+             <h3>Leonor Rivera (1880-1891)</h3>
         </div>
 
         <div class="event left" onclick="openModal('Consuelo Ortiga y Pérez', 'Isang dalagang Espanyola na anak ng dating alkalde ng Maynila. Nagustuhan ni Consuelo si Rizal at isinulat pa sa kanyang diary ang kanyang paghanga sa kanya. Bagamat may pagkakataong mahalin niya ito, pinili ni Rizal na umiwas bilang respeto sa kaibigan niyang si Eduardo de Lete, na may damdamin din kay Consuelo.', 'Consuelo_Ortiga.mp4')">
-            <h3>Consuelo Ortiga y Pérez (1882)</h3>
+           
             <img src="Consuelo_Ortiga.jpg" alt="Consuelo Ortiga y Pérez">
+             <h3>Consuelo Ortiga y Pérez (1882)</h3>
         </div>
 
         <div class="event right" onclick="openModal('O-Sei-San', 'Isang magandang Haponesa na nakilala ni Rizal habang naninirahan sa Tokyo, Japan. Sa maikling pananatili niya roon, nagkaroon sila ng matamis na ugnayan. Si O-Sei-San ay nagustuhan ni Rizal hindi lamang dahil sa kanyang kagandahan kundi pati sa kanyang talino at kabaitan. Ngunit sa kabila ng pagmamahalan nila, iniwan niya ito upang ipagpatuloy ang kanyang layunin para sa Pilipinas.', 'O-Sei-San.mp4')">
-            <h3>O-Sei-San (1888)</h3>
+            
             <img src="O-Sei-San.jpg" alt="O-Sei-San">
+            <h3>O-Sei-San (1888)</h3>
         </div>
 
         <div class="event left" onclick="openModal('Gertrude Beckett', 'Isang masayahing Inglesa mula sa London na umibig nang lubos kay Rizal. Siya ay anak ng may-ari ng bahay na tinuluyan ni Rizal habang siya ay nasa Inglatera. Madalas nilang gawin ang paglalakad at pagguhit nang magkasama, at ipinakita ni Gettie (palayaw ni Gertrude) ang kanyang pagmamahal kay Rizal sa iba’t ibang paraan. Subalit, pinili ni Rizal na hindi ipagpatuloy ang kanilang relasyon, sapagkat nais niyang ipokus ang kanyang buhay sa kanyang misyon.', 'Gertrude_Beckett.mp4')">
-            <h3>Gertrude Beckett (1888)</h3>
+            
             <img src="Gertrude_Beckett.jpg" alt="Gertrude Beckett">
+            <h3>Gertrude Beckett (1888)</h3>
         </div>
 
         <div class="event right" onclick="openModal('Suzanne Jacoby', 'Isang dalagang Belgian na nakilala ni Rizal habang siya ay naninirahan sa Brussels. Nagkaroon sila ng matamis na ugnayan, at si Suzanne ay labis na humanga kay Rizal. Kahit pa umalis na si Rizal patungong Madrid, nagpatuloy siya sa pagsusulat ng malalambing na liham kay Rizal, nagpapahiwatig ng kanyang pangungulila at pagmamahal.', 'Suzanne_Jacoby.mp4')">
-            <h3>Suzanne Jacoby (1890)</h3>
+            
             <img src="Suzanne_Jacoby.jpg" alt="Suzanne Jacoby">
+            <h3>Suzanne Jacoby (1890)</h3>
         </div>
 
         <div class="event left" onclick="openModal('Nellie Boustead', 'Isang Filipina-British na mula sa isang mayamang pamilya sa Europa. Siya ay isang matapang at matalinong dalaga na nagkaroon ng malapit na ugnayan kay Rizal. Bagamat dumating sa puntong inalok niya ng kasal si Nellie, hindi ito natuloy dahil sa isyung panrelihiyon—hindi pumayag si Rizal na maging Protestante, isang kundisyon ng pamilya ni Nellie sa kanilang pagpapakasal.', 'Nellie_Boustead.mp4')">
-            <h3>Nellie Boustead (1890)</h3>
+           
             <img src="Nellie_Boustead.jpg" alt="Nellie Boustead">
+             <h3>Nellie Boustead (1890)</h3>
         </div>
 
         <div class="event right" onclick="openModal('Josephine Bracken', 'Isang Irish na naging pinakamalapit sa puso ni Rizal sa kanyang huling mga taon. Dumating siya sa Dapitan kasama ang kanyang amain upang magpagamot kay Rizal, ngunit sa kalaunan, nagkaroon sila ng matibay na ugnayan. Dahil hindi sila pinayagang ikasal sa Simbahan, namuhay sila bilang mag-asawa. May haka-haka na si Josephine ay nagdalantao, ngunit kung totoo man, ang kanilang anak ay hindi nabuhay. Siya ang kasama ni Rizal hanggang sa kanyang huling mga sandali.', 'Josephine_Bracken.mp4')">
-            <h3>Josephine Bracken (1895)</h3>
+           
             <img src="Josephine_Bracken.jpg" alt="Josephine Bracken">
+             <h3>Josephine Bracken (1895)</h3>
         </div>
     </div>
 
@@ -627,3 +650,4 @@ document.addEventListener("keydown", function (event) {
     </script>
 </body>
 </html>
+
